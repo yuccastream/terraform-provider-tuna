@@ -22,7 +22,6 @@ resource "tuna_tls_certificate" "example" {
 
 resource "tuna_domain_zone" "example" {
   domain             = "tunnels.example.com"
-  location           = "ru"
   tls_certificate_id = tuna_tls_certificate.example.id
 }
 ```

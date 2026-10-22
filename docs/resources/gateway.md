@@ -15,7 +15,6 @@ A gateway attached to a reserved domain with a traffic policy.
 ```terraform
 resource "tuna_domain" "app" {
   subdomain = "myapp"
-  location  = "ru"
 }
 
 resource "tuna_gateway" "app" {
@@ -40,7 +39,6 @@ resource "tuna_gateway" "app" {
 
 - `created_at` (String)
 - `id` (Number) The ID of this resource.
-- `location` (String)
 
 ## Import
 

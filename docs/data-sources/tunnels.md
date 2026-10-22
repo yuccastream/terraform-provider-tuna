@@ -37,7 +37,6 @@ Read-Only:
 - `domain_name` (String)
 - `forwards_to` (String)
 - `id` (Number)
-- `location` (String)
 - `protocol` (String)
 - `public_url` (String)
 - `started_at` (String)

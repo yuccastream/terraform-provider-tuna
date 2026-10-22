@@ -14,8 +14,7 @@ A static TCP endpoint with a permanent address.
 
 ```terraform
 resource "tuna_endpoint" "db" {
-  alias    = "staging-postgres"
-  location = "ru"
+  alias = "staging-postgres"
 }
 
 output "db_address" {
@@ -29,7 +28,6 @@ output "db_address" {
 ### Required
 
 - `alias` (String) Endpoint alias (DNS label).
-- `location` (String) Location of the endpoint (ru or nl).
 
 ### Read-Only
 

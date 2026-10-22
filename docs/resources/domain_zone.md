@@ -14,14 +14,12 @@ A team domain zone for issuing subdomains on your own domain.
 
 ```terraform
 resource "tuna_domain_zone" "example" {
-  domain   = "tunnels.example.com"
-  location = "ru"
+  domain = "tunnels.example.com"
 }
 
 # Subdomains on your own zone
 resource "tuna_domain" "app" {
   subdomain      = "myapp"
-  location       = "ru"
   domain_zone_id = tuna_domain_zone.example.id
 }
 ```
@@ -32,10 +30,10 @@ resource "tuna_domain" "app" {
 ### Required
 
 - `domain` (String) Fully qualified domain name of the zone.
-- `location` (String) Location of the zone (ru or nl).
 
 ### Optional
 
+- `location` (String) Location of the nodes serving the zone (ru or nl). Defaults to ru.
 - `tls_certificate_id` (Number) ID of a custom TLS certificate to attach to the zone.
 
 ### Read-Only
